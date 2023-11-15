@@ -1,0 +1,809 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('../images/mouse.png') 2 2, auto;
+}
+li{list-style: none;}
+
+@font-face{
+    font-family: 'afutura';
+    src: url(../font/afuturarounddemi/afuturarounddemi.ttf);
+}
+@font-face {
+    font-family: jal;
+    src: url('../font/JalpullineunFonts/잘풀리는하루\ Medium.ttf');
+}
+header{
+    width: 100%;
+    height: 130px;
+    /* overflow: hidden; */
+}
+.header-inner{
+    width: 1600px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo img{
+    width: 278px;
+    height: 128px;
+}
+header nav{
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header nav > ul{
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav > ul li a{
+    color: black;
+    line-height: 130px;
+    font-family: jal;
+    font-size: 21px;
+
+}
+header nav > ul li {
+    height: 120px;
+    width: 130px;
+    text-align: center;
+}
+
+.bg{
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(6, 77, 0);
+    position: absolute;
+    top: 130px;
+    left: 0;
+    display: none;
+    z-index: 3;
+}
+
+header nav > ul > li > ul{
+    position: absolute;
+    top: 65px; left: 0;
+    width: 900px;
+    height: 80px;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-around;
+    line-height: 80px; 
+    visibility: hidden;
+    z-index: 3;
+}
+header nav > ul > li:hover > a{
+    color: #006d26;
+}
+header nav > ul > li:hover ul{
+    visibility: visible;
+}
+header nav > ul > li:hover ul li a{
+    transition: all 3s;
+}
+header nav > ul > li > ul > li{
+    width: 180px;
+}
+header nav > ul > li > ul > li a{
+    color: aliceblue;
+    font-size: 15px;
+}
+.online {
+    width: 500px;
+    transform: translateX(570px);
+}
+.new{
+    width: 500px;
+    transform: translateX(150px);
+}
+.right{
+    width: 190px;
+    font-family: fu;
+    font-size: 14px;
+    transform: translateY(5px);
+}
+.right a{
+    color: #000;
+    font-size: 16px;
+}
+.right span{
+    color: #878787;
+}
+/* ==========================banner============================ */
+.banner{
+    width: 1920px;
+    height: 888px;
+    margin: 0 auto;
+}
+.banner .mainbanner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.banner .mainbanner .swiper-wrapper {
+    width: 100%;
+    height: 888px;
+}
+.banner .mainbanner .swiper-wrapper .swiper-slide{
+    width: 100%;
+    height: 100%;
+}
+.banner .mainbanner .swiper-wrapper .swiper-slide a{
+    width: 1920px;
+    height: 888px;
+}
+.banner .mainbanner .swiper-button-next, .swiper-button-prev {
+    display: none;
+}
+.banner .mainbanner .swiper-pagination {
+    position: absolute;
+    bottom: 5%;
+}
+.banner .mainbanner .swiper-pagination-bullet {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    background-color: #fff;
+    opacity: 0.5;
+    
+}
+.banner .mainbanner .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+}
+
+
+/* =================================item=============================== */
+
+a{
+    text-decoration: none;
+    font-family: "afutura";
+    font-size: 29px;
+    color: #000;
+    position: relative;
+    /* border-bottom: solid 4px green hidden; */
+}
+
+.item-menu > ul > span{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.item{
+    width: 100%;
+    height: 1100px;
+    margin-top: 100px;
+}
+.item-inner{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.title{
+    width: 230px;
+    height: 80px;
+    margin: 0 auto;
+}
+.title p{
+    font-family: "afutura";
+    font-size: 58px;
+    transform: translateY(-70px);
+    text-align: center;
+}
+
+.item-menu{
+    width: 700px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+    transform: translateY(80px);
+}
+.item-menu ul{
+    display: flex;
+    justify-content: space-between;
+}
+.item-list{
+    height: 640px;
+    transform: translateY(130px);
+}
+.item .bx-viewport{
+    overflow: visible !important;
+}
+.slide-list li{
+    transition: all .3s;
+}
+.slide-list li:hover{
+    transform: translateY(-80px);
+}
+.slide-list li span{
+    display: block;
+    height: 640px;
+}
+.slide-list li span img{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+}
+.newunder{
+    display: block;
+    width: 100%;
+    height: 7px;
+    background-color: #009947;
+    border-radius: 30px;
+}
+.bestunder, .saladunder, .subunder, .veganunder{
+    display: block;
+    width: 100%;
+    height: 7px;
+    background-color: #009947;
+    border-radius: 30px;
+    display: none;
+}
+
+.best , .salad, .smilesub, .vegan{
+    display: none;
+    position: absolute;
+    top: -700px;
+    left: 0;
+}
+
+.bx-wrapper .bx-controls-direction .bx-prev{
+    visibility: hidden;
+    /* width: 50px;
+    height: 50px;
+    background: url('../images/left-arrow.png')no-repeat center/cover; */
+}
+.bx-wrapper .bx-controls-direction .bx-next{
+    width: 50px;
+    height: 50px;
+    background: url('../images/right-arrow.png')no-repeat center/cover;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active{
+    display: none;
+}
+.bx-wrapper{
+    width: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+
+/* 이용방법---------------------------------- */
+.order {
+    width: 1920px;
+    height: 1200px;
+    margin: 30px auto;
+    /* overflow: hidden; */
+    position: relative;
+}
+.order .h-title {
+    width: 270px;
+    height: 100px;
+    margin: 0 auto;
+    transform: translateY(10%);
+}
+.order .h-title p {
+    font-size: 58px;
+    font-family: 'afutura';
+    text-align: center;
+    margin-bottom: 30px;
+    transform: translateY(-65px);
+}
+.order .dot{
+    width: 485px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20%; left: 37.4%;
+
+}
+.order .slide-inner {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    margin: 0 auto;
+    font-family: 'jal';
+    margin-top: 100px;
+    /* transform: translateX(3%); */
+}
+.order .slide-inner .mySwiper {
+    width: 100%;
+    overflow: visible;
+    margin: 100px 0 20px 0;
+    transform: translateY(3%);
+}
+.order .slide-inner .mySwiper .swiper-wrapper {
+    width: 100%;
+    padding: 50px;
+}
+.order .slide-inner .mySwiper .swiper-wrapper .swiper-slide{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+.order .slide-inner .mySwiper .swiper-wrapper .swiper-slide .btn{
+    width: 110px;
+    height: 37px;
+    background-color: #009947;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.order .slide-inner .mySwiper .swiper-wrapper .swiper-slide .step1-l{
+    position: absolute;
+    top: 63%; right: 55%;
+}
+.order .slide-inner .mySwiper .swiper-wrapper .swiper-slide .step1-r{
+    position: absolute;
+    top: 63%; right: 3%;
+}
+.order .slide-inner .mySwiper .swiper-wrapper .swiper-slide .step4-l{
+    position: absolute;
+    top: 70%; right: 30.5%;
+}
+.order .slide-inner .mySwiper .swiper-wrapper .swiper-slide .step4-r{
+    position: absolute;
+    top: 70%; right: 20%;
+}
+
+.order .slide-inner .mySwiper .swiper-pagination-bullet {
+    display: inline-block;
+    width: 94px;
+    height: 94px;
+    background-color: #ffffff;
+    margin: 30px;
+    opacity: 1;
+    transform: translateY(6%);
+}
+.order .slide-inner .mySwiper .swiper-pagination-bullet:nth-child(1){
+    background: url('../images/be-1.png')no-repeat;
+}
+.order .slide-inner .mySwiper .swiper-pagination-bullet:nth-child(2){
+    background: url('../images/be-2.png')no-repeat;
+}
+.order .slide-inner .mySwiper .swiper-pagination-bullet:nth-child(3){
+    background: url('../images/be-3.png')no-repeat;
+}
+.order .slide-inner .mySwiper .swiper-pagination-bullet:nth-child(4){
+    background: url('../images/be-4.png')no-repeat;
+}
+.order .slide-inner .mySwiper .swiper-pagination-bullet:nth-child(5){
+    background: url('../images/be-5.png')no-repeat;
+}
+
+.order .slide-inner .mySwiper .swiper-pagination-bullet-active:nth-child(1){
+    background: url('../images/af-1.png')no-repeat !important;
+}
+.order .slide-inner .mySwiper .swiper-pagination-bullet-active:nth-child(2){
+    background: url('../images/af-2.png')no-repeat !important;
+}
+.order .slide-inner .mySwiper .swiper-pagination-bullet-active:nth-child(3){
+    background: url('../images/af-3.png')no-repeat !important;
+}
+.order .slide-inner .mySwiper .swiper-pagination-bullet-active:nth-child(4){
+    background: url('../images/af-4.png')no-repeat !important;
+}
+.order .slide-inner .mySwiper .swiper-pagination-bullet-active:nth-child(5){
+    background: url('../images/af-5.png')no-repeat !important;
+}
+
+.order .slide-inner .mySwiper .swiper-pagination-bullet-active{
+    width: 94px; 
+    height: 94px;
+    box-sizing: content-box;
+    opacity: 1;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 100%;
+}
+.order .slide-inner .mySwiper .swiper-slide .btn a{
+    color: #fff;
+    font-size: 14px;
+    line-height: 40px;
+    font-family: 'jal';
+}
+.order .slide-inner .mySwiper .swiper-slide .btn{
+    width: 110px;
+    height: 37px;
+    background-color: #009947;
+    border-radius: 10px;
+    text-align: center;
+}
+.order .slide-inner .mySwiper .swiper-slide .btn a:hover {
+    color: #ffd65c;
+}
+.order .slide-inner .mySwiper .swiper-slide .btn-wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+    transform: translate(782px, -220px);
+} */
+.order .slide-inner .mySwiper .swiper-slide .step4btn{
+    transform: translate(782px, -200px);
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+}
+.order .slide-inner .mySwiper .swiper-slide .step2, .step3, .step5{
+    transform: translate(782px, -220px);
+}
+.order .slide-inner .mySwiper .swiper-slide .step3{
+    transform: translate(782px, -250px);
+}
+
+
+
+
+
+/* 모바일 주문=============================== */
+.mobile{
+    width: 100%;
+    height: 750px;
+    margin-bottom: 150px;
+}
+.mobile-order{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.mobile-order img{
+    width: 1920px;
+    height: 574px;
+    margin: 0 auto;
+    display: block;
+}
+.mo-btn{
+    width: 172px;
+    height: 65px;
+    position: absolute;
+    top: 61%; left: 7.2%;
+    cursor: pointer;
+}
+.mo-app-l{
+    width: 220px;
+    height: 65px;
+    position: absolute;
+    top: 18%; right: 20%;
+    cursor: pointer;
+}
+.mo-app-r{
+    width: 220px;
+    height: 65px;
+    position: absolute;
+    top: 18%; right: 6%;
+    cursor: pointer;
+}
+/* 백그라운드 카드-------------------------- */
+.subro {
+    background: url('../images/bg1.jpg') no-repeat center/cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 480px;
+    position: relative;
+    margin-top: 50px;
+}
+.subro-wrap{
+    width: 100%;
+    margin: 0 auto;
+}
+.flip { 
+  width: 581px;
+  height: 581px;
+  perspective: 1100px;
+
+}
+
+.card {
+  width: 100%; 
+  height: 100%; 
+  position: absolute;
+  left: 350px;
+        top: -100px;
+    transition: 1s;
+  transform-style: preserve-3d;
+  
+}   
+
+.front, .back {
+  position: absolute;
+  width: 100%; 
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  background: #FFC20D; 
+  border-radius: 50%;
+}
+
+
+.back { 
+  background: #FFC20D; 
+  transform: rotateY(180deg);
+  border-radius: 50%;
+}
+
+.back img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.flip:hover .card {
+  transform: rotateY(180deg);
+}
+.flipp{ 
+    width: 522px;
+    height: 522px;
+}
+.cardd {
+    width: 522px;
+    height: 522px;
+    position: absolute;
+    right: 350px;
+    top: 0px;
+    transition: 1s;
+    transform-style: preserve-3d;
+}   
+.frontt, .backk {
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%;
+  }
+  .frontt {
+    background-color: #009947;
+  }
+  .backk {
+    background-color: #009947;
+    transform: rotateY(180deg);
+  }
+  .cardd:hover {
+    transform: rotateY(180deg);
+  }
+
+
+  .backk img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+/* 뉴스------------------------------------ */
+.news {
+    width: 1920px;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-family: 'jal';
+}
+.news .title {
+    width: 350px;
+    height: 100px;
+    margin: 0 auto;
+    transform: translateY(55px);
+}
+.news .title p {
+    font-size: 50px;
+    font-family: 'afutura';
+    text-align: center;
+    margin-bottom: 30px;
+    transform: translateY(-60px);
+}
+.news .news-inner {
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(150px);
+}
+.news .news-inner .drama {
+    width: 60%;
+    height: 350px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.drama-text{
+    width: 500px;
+}
+.drama-text a:hover{
+    text-decoration: underline 1px #636363;
+    
+}
+.drbx-wrapper{
+    width: 270px;
+    height: 330px;
+    transform: translate(-5px, 20px);
+}
+.drama-slide{
+    width: 100%;
+    height: 100%;
+}
+.drama-slide > li{
+    width: 100%;
+    height: 100%;
+}
+.drama-slide > li img{
+    border-radius: 20px;
+}
+
+
+
+.news .news-inner .drama p {
+    font-size: 20px;
+    padding: 30px 0 50px 0;
+}
+.drama .drama-text > a {
+    display: block;
+    width: 500px;
+    font-size: 16px;
+    padding: 15px 0;
+    font-family: 'jal';
+    color: rgba(0, 0, 0, 0.712);
+}
+.news .news-inner .drama span{
+    display: block;
+    width: 40px; height: 20px;
+    margin-top: 30px;
+}
+.news .news-inner .drama .more > a {
+    color: rgba(0, 0, 0, 0.452);
+    font-size: 16px;
+}
+
+
+/* 유튜브영상 */
+.news .news-inner .movie {
+    width: 630px;
+    height: 350px;
+    position: relative;
+    border-left: 1px solid rgba(0, 0, 0, 0.267) ;
+}
+.news .news-inner .movie iframe {
+    display: block;
+    position: absolute;
+    right: 0; top: 5%;
+    border-radius: 20px;
+}
+
+/* 매장위치,푸터--------------------------------------- */
+.majang {
+    width: 1920px;
+    height: 550px;
+    background-color: #F3F3F3;
+    position: relative;
+    font-family: 'jal';
+    margin: 0 auto;
+}
+.subwayin {
+   width: 653px;
+   height: 585px;
+   position: absolute;
+   left: 130px;
+   top: -78px;
+}
+.subwayout {
+    position: absolute;
+    left: 370px;
+    bottom: 0px;
+}
+
+.subwaygle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 850px; top: 110px;
+    text-align: center;
+    width: 441px;
+    height: 373px;
+}
+.subwaygle .stop {
+    font-size: 30px;
+}
+.subwaygle .smain{
+    line-height: 1.9;
+}
+.subwaygle .stop2 {
+    font-size: 20px;
+}
+.subwaygle .smain, .sbt {
+    font-size: 16px;
+    color: #000;
+    opacity: .6;
+}
+.majang .slefttop {
+    position: fixed;
+    right: 130px;
+    bottom: 100px;
+    z-index: 9;
+}
+.majang .sicon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(50px);
+}
+
+footer {
+    background-color: #004F1B;
+    width: 100%;
+    height: 370px;
+    margin-bottom: 0px;
+    position: relative;
+    color: #fff;
+    font-size: 12px;
+}
+footer .logo a{
+    display: block;
+    width: 323px;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+footer .icon {
+    width: 220px;
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+footer .icon .naver img {
+    width: 38px;
+    height: 38px;
+}
+footer .icon .yotube img {
+    width: 45px;
+    height: 36px;
+}
+footer .icon .insta img {
+    width: 36px;
+    height: 38px;
+}
+footer .h1 {
+    font-size: 14px;
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+footer .p1 {
+    position: absolute;
+    bottom: 66px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+footer .p2 {
+    position: absolute;
+    bottom: 41px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.footer-text{
+    font-family: 'jal';
+}
